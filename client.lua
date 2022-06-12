@@ -479,7 +479,7 @@ JM36.CreateThread(function()
     while true do
         JM36.Wait(100)
         local ped = PlayerPedId()
-        local coords = GetEntityCoords(ped)
+        local coords = GetEntityCoords(ped, false)
         local zone = GetNameOfZone(coords.x, coords.y, coords.z)
         streetName, crossingRoad = GetStreetNameAtCoord(coords.x, coords.y, coords.z, 0, 0)
         streetName = GetStreetNameFromHashKey(streetName)
